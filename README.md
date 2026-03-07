@@ -60,7 +60,11 @@ The API runs on HTTPS. Trust the .NET dev certificate once so your browser and f
 dotnet dev-certs https --trust
 ```
 
-> On Windows you will see a UAC prompt — click **Yes**. On macOS, enter your system password. This needs to be done only once per machine.
+> **Windows users — you will see two prompts:**
+> 1. **UAC elevation prompt** — click **Yes** to allow the command to run as administrator.
+> 2. **Windows Security dialog** — *"Do you want to install this certificate?"* — click **Yes** to add the certificate to your Trusted Root Certification Authorities store.
+>
+> Both prompts must be accepted for the certificate to be trusted. This only needs to be done once per machine.
 
 ### 2. Start the API
 
@@ -76,8 +80,8 @@ dotnet ef database update --project ../EmployeeManagement.Infrastructure
 # This is EXPECTED and NORMAL — dotnet ef intentionally aborts the host after reading
 # the DbContext configuration. The migration is successful if the output ends with "Done."
 
-# Run the API (https://localhost:7020)
-dotnet run
+# Run the API (https://localhost:5001)
+dotnet run --urls "https://localhost:5001"
 ```
 
 On first startup, the database is automatically seeded with:
@@ -99,7 +103,7 @@ cp .env.example .env   # Windows: copy .env.example .env
 Add `.env` contents (edit as needed):
 
 ```env
-REACT_APP_API_BASE_URL=https://localhost:7020/api
+REACT_APP_API_BASE_URL=https://localhost:5001/api
 ```
 
 > **Important:** The `.env` file is git-ignored. Never commit real secrets to source control. Use `.env.example` as the template.
