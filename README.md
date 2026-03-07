@@ -34,7 +34,7 @@ A full-stack Employee Management System built with **.NET 10** (Clean Architectu
 
 1. Install and start PostgreSQL.
 
-2. Create a database (or let EF Core create it automatically on first migration):
+2. (Optional) Create a database (or let EF Core create it automatically on first migration):
 
    ```sql
    CREATE DATABASE "EmployeeManagementDb";
