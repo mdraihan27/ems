@@ -108,7 +108,10 @@ REACT_APP_API_BASE_URL=https://localhost:7020/api
 
 ```bash
 # Install dependencies
-npm install
+# --legacy-peer-deps is required because react-scripts@5 declares a peer dependency
+# on TypeScript ^3||^4, but this project uses TypeScript 5. The flag bypasses that
+# outdated constraint — the code compiles and runs correctly with TypeScript 5.
+npm install --legacy-peer-deps
 
 # Start the dev server (http://localhost:3000)
 npm start
