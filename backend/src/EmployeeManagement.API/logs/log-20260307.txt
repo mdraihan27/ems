@@ -1,0 +1,776 @@
+2026-03-07 14:32:31.080 +06:00 [INF] Starting Employee Management System API
+2026-03-07 14:32:36.256 +06:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 88
+2026-03-07 17:18:45.803 +06:00 [INF] Starting Employee Management System API
+2026-03-07 17:18:48.134 +06:00 [ERR] An error occurred using the connection to database 'EmployeeManagementDb' on server 'tcp://localhost:5432'.
+2026-03-07 17:18:48.141 +06:00 [FTL] An error occurred during database migration/seeding
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:18:48.210 +06:00 [FTL] Application terminated unexpectedly
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:19:08.851 +06:00 [INF] Starting Employee Management System API
+2026-03-07 17:19:10.975 +06:00 [ERR] An error occurred using the connection to database 'EmployeeManagementDb' on server 'tcp://localhost:5432'.
+2026-03-07 17:19:10.985 +06:00 [FTL] An error occurred during database migration/seeding
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:19:11.034 +06:00 [FTL] Application terminated unexpectedly
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:22:54.922 +06:00 [INF] Starting Employee Management System API
+2026-03-07 17:22:57.077 +06:00 [ERR] An error occurred using the connection to database 'EmployeeManagementDb' on server 'tcp://localhost:5432'.
+2026-03-07 17:22:57.088 +06:00 [FTL] An error occurred during database migration/seeding
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:22:57.149 +06:00 [FTL] Application terminated unexpectedly
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:23:51.197 +06:00 [INF] Starting Employee Management System API
+2026-03-07 17:23:53.165 +06:00 [ERR] An error occurred using the connection to database 'EmployeeManagementDb' on server 'tcp://localhost:5432'.
+2026-03-07 17:23:53.173 +06:00 [FTL] An error occurred during database migration/seeding
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:23:53.212 +06:00 [FTL] Application terminated unexpectedly
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:54:52.944 +06:00 [INF] Starting Employee Management System API
+2026-03-07 17:54:55.217 +06:00 [ERR] An error occurred using the connection to database 'EmployeeManagementDb' on server 'tcp://localhost:5432'.
+2026-03-07 17:54:55.227 +06:00 [FTL] An error occurred during database migration/seeding
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:54:55.287 +06:00 [FTL] Application terminated unexpectedly
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "postgres"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlHistoryRepository.GetAppliedMigrationsAsync(CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Migrations.Internal.NpgsqlMigrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in H:\Employee Management System\backend\src\EmployeeManagement.API\Program.cs:line 118
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "postgres"
+    File: auth.c
+    Line: 320
+    Routine: auth_failed
+2026-03-07 17:58:02.547 +06:00 [INF] Starting Employee Management System API
+2026-03-07 17:58:04.264 +06:00 [ERR] An error occurred using the connection to database 'EmployeeManagementDb' on server 'tcp://localhost:5432'.
+2026-03-07 17:58:06.386 +06:00 [INF] Database migrated successfully
+2026-03-07 17:58:07.105 +06:00 [INF] Database seeding completed
+2026-03-07 18:54:24.652 +06:00 [INF] Starting Employee Management System API
+2026-03-07 18:54:27.886 +06:00 [INF] Database migrated successfully
+2026-03-07 18:54:28.447 +06:00 [INF] Database seeding completed
+2026-03-07 18:57:22.867 +06:00 [INF] Starting Employee Management System API
+2026-03-07 18:57:25.527 +06:00 [INF] Database migrated successfully
+2026-03-07 18:57:25.995 +06:00 [INF] Database seeding completed
+2026-03-07 18:57:26.109 +06:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2026-03-07 19:03:30.907 +06:00 [INF] Starting Employee Management System API
+2026-03-07 19:03:33.739 +06:00 [INF] Database migrated successfully
+2026-03-07 19:03:34.170 +06:00 [INF] Database seeding completed
+2026-03-07 19:07:10.049 +06:00 [INF] HTTP GET /api started
+2026-03-07 19:07:10.050 +06:00 [INF] HTTP GET /api/auth/register started
+2026-03-07 19:07:15.436 +06:00 [INF] HTTP GET /api responded 404
+2026-03-07 19:07:15.437 +06:00 [INF] HTTP GET /api/auth/register responded 405
+2026-03-07 19:07:32.704 +06:00 [INF] HTTP OPTIONS /api/auth/register started
+2026-03-07 19:07:32.712 +06:00 [INF] HTTP OPTIONS /api/auth/register responded 204
+2026-03-07 19:07:32.726 +06:00 [INF] HTTP POST /api/auth/register started
+2026-03-07 19:07:33.773 +06:00 [INF] New user registered: hossenraihan2002@gmail.com with role Viewer
+2026-03-07 19:07:34.169 +06:00 [INF] HTTP POST /api/auth/register responded 201
+2026-03-07 19:07:34.485 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:07:34.488 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:07:34.494 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:07:34.641 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 19:07:34.903 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 19:07:35.328 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:07:50.808 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:07:50.810 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:07:50.815 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:07:50.838 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:08.266 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:08.269 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:08.276 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:08.310 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:21.572 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:21.574 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:21.578 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:21.590 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:22.759 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:22.762 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:22.766 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:22.772 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:23.889 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:23.892 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:23.898 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:23.905 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:25.415 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:25.417 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:25.424 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:25.435 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:27.251 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:27.253 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:27.260 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:27.270 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:30.133 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:30.134 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:30.140 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:30.150 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:32.568 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:32.571 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:32.578 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:32.588 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:35.386 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:35.389 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:35.395 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:35.595 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:38.550 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:38.551 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:38.557 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:38.562 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:39.280 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:39.282 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:39.306 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:39.323 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:08:40.644 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:08:40.646 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:08:40.652 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:08:40.705 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:09:04.624 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:09:04.627 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:09:04.633 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:09:04.642 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:09:14.740 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:09:14.742 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:09:14.750 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:09:14.759 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:09:50.737 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:09:50.740 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:09:50.747 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:09:50.760 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:10:12.980 +06:00 [INF] HTTP OPTIONS /api/auth/revoke started
+2026-03-07 19:10:12.981 +06:00 [INF] HTTP OPTIONS /api/auth/revoke responded 204
+2026-03-07 19:10:12.987 +06:00 [INF] HTTP POST /api/auth/revoke started
+2026-03-07 19:10:13.038 +06:00 [INF] Refresh token revoked for user: 0ba9eb00-f15f-4673-a925-66aebd06d281
+2026-03-07 19:10:13.040 +06:00 [INF] HTTP POST /api/auth/revoke responded 200
+2026-03-07 19:10:31.638 +06:00 [INF] HTTP OPTIONS /api/auth/register started
+2026-03-07 19:10:31.640 +06:00 [INF] HTTP OPTIONS /api/auth/register responded 204
+2026-03-07 19:10:31.643 +06:00 [INF] HTTP POST /api/auth/register started
+2026-03-07 19:10:31.787 +06:00 [INF] New user registered: hossenraihani2002@gmail.com with role Admin
+2026-03-07 19:10:31.794 +06:00 [INF] HTTP POST /api/auth/register responded 201
+2026-03-07 19:10:31.858 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:10:31.861 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:10:31.867 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:10:31.875 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:10:35.683 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:10:35.685 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:10:35.689 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:10:35.700 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:10:55.102 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:10:55.106 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:10:55.115 +06:00 [INF] HTTP POST /api/employees started
+2026-03-07 19:10:55.249 +06:00 [INF] HTTP POST /api/employees responded 201
+2026-03-07 19:10:55.600 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc started
+2026-03-07 19:10:55.602 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc responded 204
+2026-03-07 19:10:55.608 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc started
+2026-03-07 19:10:55.679 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc responded 200
+2026-03-07 19:11:13.299 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/spouse started
+2026-03-07 19:11:13.302 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/spouse responded 204
+2026-03-07 19:11:13.321 +06:00 [INF] HTTP POST /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/spouse started
+2026-03-07 19:11:13.715 +06:00 [INF] HTTP POST /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/spouse responded 201
+2026-03-07 19:11:13.753 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc started
+2026-03-07 19:11:13.818 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc responded 204
+2026-03-07 19:11:13.925 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc started
+2026-03-07 19:11:13.977 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc responded 200
+2026-03-07 19:11:40.966 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/children started
+2026-03-07 19:11:40.968 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/children responded 204
+2026-03-07 19:11:40.973 +06:00 [INF] HTTP POST /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/children started
+2026-03-07 19:11:41.263 +06:00 [INF] HTTP POST /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/children responded 201
+2026-03-07 19:11:41.286 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc started
+2026-03-07 19:11:41.290 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc responded 204
+2026-03-07 19:11:41.319 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc started
+2026-03-07 19:11:41.368 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc responded 200
+2026-03-07 19:11:48.549 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:11:48.552 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:11:48.558 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:11:48.569 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:11:53.175 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:11:53.177 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:11:53.181 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:11:53.188 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:11:54.661 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:11:54.662 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:11:54.675 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:11:54.683 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:11:55.306 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:11:55.308 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:11:55.313 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:11:55.328 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:11:56.729 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:11:56.731 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:11:56.738 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:11:56.743 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 19:12:44.436 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 19:12:44.437 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 19:12:44.443 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 19:12:44.474 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:03:29.737 +06:00 [INF] Starting Employee Management System API
+2026-03-07 20:03:52.231 +06:00 [INF] Database migrated successfully
+2026-03-07 20:03:53.531 +06:00 [INF] Database seeding completed
+2026-03-07 20:03:57.633 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:03:57.653 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:03:57.686 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:04.712 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:04:05.035 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:04:05.833 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:25.081 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:25.087 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:25.098 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:25.439 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:28.686 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:28.688 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:28.703 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:28.849 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:30.760 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:30.763 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:30.772 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:30.793 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:34.651 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:34.654 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:34.666 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:34.687 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:40.708 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:40.714 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:40.721 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:40.737 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:45.234 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:45.243 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:45.252 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:45.370 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:47.625 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:47.630 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:47.651 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:47.738 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:49.779 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:49.800 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:49.818 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:49.836 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:04:52.467 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:04:52.470 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:04:52.486 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:04:52.503 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:00.337 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:00.345 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:00.358 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:00.378 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:05.573 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:05.587 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:05.600 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:05.616 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:05.619 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:05.636 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:05.763 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:06.095 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:09.694 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:09.700 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:09.714 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:09.833 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:13.440 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:13.443 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:13.452 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:13.468 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:17.892 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:17.901 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:17.927 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:18.071 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:20.919 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:20.924 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:20.931 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:21.011 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:21.980 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:21.982 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:21.994 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:22.002 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:23.846 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:23.848 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:23.862 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:23.882 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:25.517 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:25.520 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:25.527 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:25.536 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:26.446 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:26.451 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:26.464 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:26.498 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:32.356 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:32.363 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:32.373 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:32.387 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:34.913 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:34.920 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:34.934 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:34.967 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:36.698 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:36.701 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:36.713 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:36.730 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:37.798 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:37.820 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:37.854 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:37.900 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:47.993 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:47.997 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:48.015 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:48.048 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:50.391 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:50.397 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:50.420 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:50.437 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:05:51.601 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:05:51.603 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:05:51.622 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:05:51.640 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:06:03.514 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:06:03.518 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:06:03.534 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:06:03.570 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:06:09.596 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:06:09.602 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:06:09.618 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:06:09.650 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:06:13.909 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:06:13.913 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 204
+2026-03-07 20:06:13.926 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:06:14.077 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 200
+2026-03-07 20:10:49.272 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:10:49.295 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:10:49.313 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:10:49.457 +06:00 [INF] HTTP GET /api/employees responded 401
+2026-03-07 20:10:49.488 +06:00 [INF] HTTP OPTIONS /api/auth/refresh started
+2026-03-07 20:10:49.490 +06:00 [INF] HTTP OPTIONS /api/auth/refresh responded 204
+2026-03-07 20:10:49.508 +06:00 [INF] HTTP POST /api/auth/refresh started
+2026-03-07 20:10:51.716 +06:00 [INF] HTTP POST /api/auth/refresh responded 200
+2026-03-07 20:10:51.728 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:10:51.764 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:15:01.918 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:15:01.970 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:15:01.992 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:15:02.432 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:15:04.866 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:15:04.870 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:15:04.895 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:15:05.042 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:15:06.498 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:15:06.501 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 204
+2026-03-07 20:15:06.533 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:15:06.668 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 200
+2026-03-07 20:15:22.084 +06:00 [INF] HTTP OPTIONS /api/employees/6eff88d8-be60-4a68-9c5b-19bfd6cf1f4d started
+2026-03-07 20:15:22.088 +06:00 [INF] HTTP OPTIONS /api/employees/6eff88d8-be60-4a68-9c5b-19bfd6cf1f4d responded 204
+2026-03-07 20:15:22.104 +06:00 [INF] HTTP GET /api/employees/6eff88d8-be60-4a68-9c5b-19bfd6cf1f4d started
+2026-03-07 20:15:22.121 +06:00 [INF] HTTP GET /api/employees/6eff88d8-be60-4a68-9c5b-19bfd6cf1f4d responded 200
+2026-03-07 20:15:43.321 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:15:43.324 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:15:43.335 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:15:43.389 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:15:45.106 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:15:45.108 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:15:45.116 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:15:45.141 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:15:48.714 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:15:48.716 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:15:48.724 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:15:48.737 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:15:49.316 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:15:49.319 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:15:49.324 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:15:49.341 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:16:14.316 +06:00 [INF] Starting Employee Management System API
+2026-03-07 20:16:19.896 +06:00 [INF] Database migrated successfully
+2026-03-07 20:16:20.670 +06:00 [INF] Database seeding completed
+2026-03-07 20:17:18.342 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:17:18.403 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:17:18.469 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:17:21.873 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:17:21.887 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:17:21.907 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:17:22.756 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:17:22.756 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:17:22.986 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:17:23.707 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:17:23.718 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:05.221 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:05.225 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:05.232 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:05.512 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:08.255 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:08.258 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:08.267 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:08.335 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:12.620 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:12.622 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:12.630 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:12.644 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:13.567 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:13.570 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:13.582 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:13.594 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:14.829 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:14.833 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:14.844 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:14.854 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:17.583 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:17.587 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:17.603 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:17.641 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:18.818 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:18.821 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:18.838 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:18.854 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:21.308 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:21.311 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:21.319 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:21.334 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:22.051 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:22.250 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:22.259 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:22.365 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:24.153 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:24.155 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:24.167 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:24.184 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:24.701 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:24.704 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:24.712 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:24.724 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:34.484 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:34.488 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:34.502 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:34.598 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:18:42.370 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:18:42.373 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:18:42.385 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:18:42.399 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:20:15.912 +06:00 [INF] HTTP OPTIONS /api/employees/reports/list started
+2026-03-07 20:20:15.922 +06:00 [INF] HTTP OPTIONS /api/employees/reports/list responded 204
+2026-03-07 20:20:15.938 +06:00 [INF] HTTP GET /api/employees/reports/list started
+2026-03-07 20:20:17.690 +06:00 [INF] HTTP GET /api/employees/reports/list responded 200
+2026-03-07 20:20:43.637 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:20:43.641 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:20:43.648 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:20:43.688 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:20:44.917 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:20:44.920 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 204
+2026-03-07 20:20:44.937 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:20:45.165 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 200
+2026-03-07 20:20:58.491 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55/reports/cv started
+2026-03-07 20:20:58.494 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55/reports/cv responded 204
+2026-03-07 20:20:58.504 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55/reports/cv started
+2026-03-07 20:20:58.754 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55/reports/cv responded 200
+2026-03-07 20:28:11.519 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:28:11.519 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:28:11.554 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:28:11.554 +06:00 [INF] HTTP OPTIONS /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 204
+2026-03-07 20:28:11.636 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:28:11.652 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 started
+2026-03-07 20:28:12.914 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:28:12.914 +06:00 [INF] HTTP GET /api/employees/174bb701-972f-4232-8f1a-4088441a9b55 responded 200
+2026-03-07 20:29:05.084 +06:00 [INF] Starting Employee Management System API
+2026-03-07 20:29:09.372 +06:00 [INF] Database migrated successfully
+2026-03-07 20:29:10.192 +06:00 [INF] Database seeding completed
+2026-03-07 20:31:20.500 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:31:20.533 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:31:20.579 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:31:25.217 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:31:25.244 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:31:25.256 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:31:25.269 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:31:25.934 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-07 20:31:26.852 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:31:26.852 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:31:33.252 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:31:33.256 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:31:33.266 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:31:33.497 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:31:34.144 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:31:34.150 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:31:34.156 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:31:34.171 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:31:37.053 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/reports/cv started
+2026-03-07 20:31:37.059 +06:00 [INF] HTTP OPTIONS /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/reports/cv responded 204
+2026-03-07 20:31:37.082 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/reports/cv started
+2026-03-07 20:31:38.539 +06:00 [INF] HTTP GET /api/employees/f9a99074-17ed-44a9-ab29-ed68666660cc/reports/cv responded 200
+2026-03-07 20:41:28.460 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:41:28.678 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:41:28.713 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:41:29.359 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:43:23.413 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:43:23.443 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:43:23.457 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:43:23.642 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:46:13.960 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:46:14.291 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:46:14.401 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:46:15.579 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:50:39.505 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:50:39.574 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:50:39.608 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:50:40.668 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:52:11.729 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:52:11.851 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:52:11.950 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:52:12.370 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:52:16.683 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:52:16.687 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:52:16.699 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:52:16.743 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:52:27.630 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:52:27.634 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:52:27.647 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:52:27.876 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:52:52.357 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:52:52.364 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:52:52.370 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:52:52.396 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 20:54:28.518 +06:00 [INF] HTTP OPTIONS /api/employees started
+2026-03-07 20:54:28.554 +06:00 [INF] HTTP OPTIONS /api/employees responded 204
+2026-03-07 20:54:28.582 +06:00 [INF] HTTP GET /api/employees started
+2026-03-07 20:54:28.985 +06:00 [INF] HTTP GET /api/employees responded 200
+2026-03-07 21:00:28.974 +06:00 [INF] HTTP OPTIONS /api/auth/revoke started
+2026-03-07 21:00:28.992 +06:00 [INF] HTTP OPTIONS /api/auth/revoke responded 204
+2026-03-07 21:00:29.038 +06:00 [INF] HTTP POST /api/auth/revoke started
+2026-03-07 21:00:30.326 +06:00 [INF] Refresh token revoked for user: f4d06813-6d27-4b1e-bec4-19a71042a7d0
+2026-03-07 21:00:30.344 +06:00 [INF] HTTP POST /api/auth/revoke responded 200

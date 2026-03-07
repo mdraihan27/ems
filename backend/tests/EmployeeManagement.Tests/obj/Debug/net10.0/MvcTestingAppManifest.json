@@ -1,0 +1,7 @@
+{
+  "EmployeeManagement.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "H:\\Employee Management System\\backend\\src\\EmployeeManagement.API",
+  "EmployeeManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "H:\\Employee Management System\\backend\\src\\EmployeeManagement.Application",
+  "EmployeeManagement.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "H:\\Employee Management System\\backend\\src\\EmployeeManagement.Domain",
+  "EmployeeManagement.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "H:\\Employee Management System\\backend\\src\\EmployeeManagement.Infrastructure",
+  "EmployeeManagement.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "H:\\Employee Management System\\backend\\src\\EmployeeManagement.Shared"
+}

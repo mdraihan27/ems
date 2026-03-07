@@ -1,0 +1,15 @@
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\bin\Debug\net10.0\EmployeeManagement.Shared.deps.json
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\bin\Debug\net10.0\EmployeeManagement.Shared.dll
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\bin\Debug\net10.0\EmployeeManagement.Shared.pdb
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\bin\Debug\net10.0\EmployeeManagement.Domain.dll
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\bin\Debug\net10.0\EmployeeManagement.Domain.pdb
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.csproj.AssemblyReference.cache
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.AssemblyInfoInputs.cache
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.AssemblyInfo.cs
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.csproj.CoreCompileInputs.cache
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\Employee.53699E58.Up2Date
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.dll
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\refint\EmployeeManagement.Shared.dll
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\EmployeeManagement.Shared.pdb
+H:\Employee Management System\backend\src\EmployeeManagement.Shared\obj\Debug\net10.0\ref\EmployeeManagement.Shared.dll
