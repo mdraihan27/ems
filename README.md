@@ -96,7 +96,7 @@ cd frontend
 cp .env.example .env   # Windows: copy .env.example .env
 ```
 
-`.env` contents (edit as needed):
+Add `.env` contents (edit as needed):
 
 ```env
 REACT_APP_API_BASE_URL=https://localhost:7020/api
