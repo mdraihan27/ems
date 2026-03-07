@@ -72,6 +72,9 @@ dotnet restore
 
 # Apply EF Core migrations (creates the database schema)
 dotnet ef database update --project ../EmployeeManagement.Infrastructure
+# Note: You will see a "HostAbortedException: The host was aborted" message in the output.
+# This is EXPECTED and NORMAL — dotnet ef intentionally aborts the host after reading
+# the DbContext configuration. The migration is successful if the output ends with "Done."
 
 # Run the API (https://localhost:7020)
 dotnet run
